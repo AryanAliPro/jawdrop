@@ -18,20 +18,28 @@ Every one of these came from a one-line brief. No two share a layout, because th
 
 <table>
   <tr>
-    <td width="50%"><img src="examples/pike-and-alder.jpg" alt="Pike & Alder, a Portland builder: blueprint line drawing of a house beside the headline Build it right. Then turn the lights on."><br><sub><b>Pike &amp; Alder</b> · home builders, Portland</sub></td>
-    <td width="50%"><img src="examples/sonder-notes.jpg" alt="Sonder Notes, an iPhone notes app: a night city of lit windows behind the headline Your thoughts, beautifully organized."><br><sub><b>Sonder Notes</b> · iPhone notes app</sub></td>
+    <td width="50%"><img src="examples/first-crack.jpg" alt="First Crack, a coffee roastery: a cracked coffee bean between the words First and Crack."><br><sub><b>First Crack</b> · coffee roastery &amp; kitchen, Portland</sub></td>
+    <td width="50%"><img src="examples/crumb-and-crema.jpg" alt="Crumb &amp; Crema, a coffee bar: the word Bitter set against a pink shape and an espresso cup seen from above."><br><sub><b>Crumb &amp; Crema</b> · coffee bar &amp; confectionery</sub></td>
   </tr>
   <tr>
-    <td width="50%"><img src="examples/hotslip.jpg" alt="Hotslip, a burger delivery: bold red page with the headline Hot off the slip and an order receipt you can edit."><br><sub><b>Hotslip</b> · smash-burger delivery</sub></td>
-    <td width="50%"><img src="examples/quarto.jpg" alt="Hotel Quarto in Lisbon: a key rack where each hanging key is a room you can book."><br><sub><b>Quarto</b> · fourteen-room hotel, Lisbon</sub></td>
+    <td width="50%"><img src="examples/window-seat.jpg" alt="Window Seat, a coffee and sweets shop: Pull up a window seat, beside a cafe table framed by a window."><br><sub><b>Window Seat</b> · coffee &amp; sweets, Larkin Street</sub></td>
+    <td width="50%"><img src="examples/solstizio.jpg" alt="Hotel Solstizio in Positano: Stay for the light, beside a round window onto the Amalfi coast."><br><sub><b>Hotel Solstizio</b> · Positano, Amalfi Coast</sub></td>
   </tr>
   <tr>
-    <td width="50%"><img src="examples/linden-light.jpg" alt="Linden Light, a home cleaning company: light falls through a window across the dark page beside Come home to the exhale."><br><sub><b>Linden Light</b> · home cleaning, Portland</sub></td>
-    <td width="50%"><img src="examples/offset.jpg" alt="Offset, a digital marketing agency: headline Your brand is out of register printed with misaligned color plates."><br><sub><b>Offset</b> · marketing agency, Lisbon &amp; Austin</sub></td>
+    <td width="50%"><img src="examples/everafter.jpg" alt="Everafter, Paris wedding planners: Ever After in huge serif letters around a photo of a couple on a Paris bridge."><br><sub><b>Everafter</b> · wedding planners, Paris</sub></td>
+    <td width="50%"><img src="examples/elias-marren.jpg" alt="Elias Marren, a photographer: Light, in its hours, over mountains at sunset above the clouds."><br><sub><b>Elias Marren</b> · landscape photographer, Zurich</sub></td>
   </tr>
   <tr>
-    <td width="50%"><img src="examples/ninety.jpg" alt="Ninety, a Chicago home cleaning crew: huge Back at Ninety headline with scattered illustrated cleaning tools."><br><sub><b>Ninety</b> · home cleaning, Chicago</sub></td>
-    <td width="50%"><img src="examples/wisp.jpg" alt="Wisp, an iPhone notes app: Six thousand thoughts a day. Keep the good ones. beside a phone surrounded by handwritten notes."><br><sub><b>Wisp</b> · iPhone notes app</sub></td>
+    <td width="50%"><img src="examples/kyma.jpg" alt="Kyma, an island hotel in Milos: Stay longer over an aerial photo of a cove, with a draggable night picker."><br><sub><b>Kyma</b> · island hotel, Milos</sub></td>
+    <td width="50%"><img src="examples/forge.jpg" alt="Forge, a fitness club: Built under load, with a lifter inside a red weight plate."><br><sub><b>Forge</b> · strength &amp; coaching club, Austin</sub></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="examples/alba-dental.jpg" alt="Alba Dental Studio: Your smile, shade by shade, beside a fanned-out tooth shade guide."><br><sub><b>Alba Dental Studio</b> · dentist, Austin</sub></td>
+    <td width="50%"><img src="examples/oliva-and-stone.jpg" alt="Oliva &amp; Stone, an Italian kitchen: the name in tall serif letters beside an arched photo of a plated dish."><br><sub><b>Oliva &amp; Stone</b> · Italian kitchen, Austin</sub></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="examples/dew-and-bloom.jpg" alt="Dew &amp; Bloom skincare: Skincare that keeps time, with the product range in front of a rising sun."><br><sub><b>Dew &amp; Bloom</b> · skincare, Toronto</sub></td>
+    <td width="50%"><img src="examples/setpoint.jpg" alt="Setpoint heating and air: Set the weather inside, beside a large thermostat dial set to 72."><br><sub><b>Setpoint</b> · heating &amp; air, Denver</sub></td>
   </tr>
 </table>
 
