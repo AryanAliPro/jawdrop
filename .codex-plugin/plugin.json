@@ -1,0 +1,28 @@
+{
+  "name": "jawdrop",
+  "version": "1.0.0",
+  "description": "Jawdrop: the $1 Billion Prize website designer. Fully custom, award-level websites for any business, in any stack.",
+  "author": {
+    "name": "AryanAliPro",
+    "url": "https://github.com/AryanAliPro"
+  },
+  "homepage": "https://github.com/AryanAliPro/jawdrop",
+  "repository": "https://github.com/AryanAliPro/jawdrop",
+  "license": "MIT",
+  "keywords": ["skills", "web-design", "website", "landing-page", "gsap", "animation"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Jawdrop",
+    "shortDescription": "Award-level, fully custom websites for any business.",
+    "longDescription": "Jawdrop treats every website as an entry in the world's hardest web design competition with a 1 Billion Dollar prize: an original concept per brief, industry vibe, GSAP and SVG animation, micro-interactions, real images, and a five-judge review before hand-over.",
+    "developerName": "AryanAliPro",
+    "category": "Design",
+    "capabilities": [],
+    "websiteURL": "https://github.com/AryanAliPro/jawdrop",
+    "defaultPrompt": [
+      "Build website for a family-run roofing company in Denver.",
+      "Build a multi-page website for an immigration law firm in Toronto.",
+      "Redesign this landing page so it feels fully custom and award-level."
+    ]
+  }
+}

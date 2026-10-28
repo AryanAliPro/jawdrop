@@ -1,0 +1,45 @@
+name: Check skill
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: SKILL.md frontmatter is valid
+        run: |
+          pip install --quiet pyyaml
+          python - <<'EOF'
+          import re, sys, yaml
+          text = open("skills/jawdrop/SKILL.md", encoding="utf-8").read()
+          match = re.match(r"^---\n(.*?)\n---\n(.*)$", text, re.S)
+          assert match, "SKILL.md must start with a --- frontmatter block"
+          meta, body = yaml.safe_load(match.group(1)), match.group(2)
+          assert meta.get("name") == "jawdrop", "name must be jawdrop"
+          desc = meta.get("description", "")
+          assert 0 < len(desc) <= 1024, f"description must be 1-1024 characters, is {len(desc)}"
+          assert "<" not in desc and ">" not in desc, "description cannot contain angle brackets"
+          # Claude Code replaces $0, $1 ... and $ARGUMENTS in the body with the user's arguments.
+          bad = re.findall(r"\$(?:\d|ARGUMENTS)", body)
+          assert not bad, f"SKILL.md body contains argument placeholders: {bad}"
+          print("SKILL.md ok")
+          EOF
+
+      - name: Plugin manifests are valid JSON
+        run: for f in .claude-plugin/marketplace.json .codex-plugin/plugin.json .agents/plugins/marketplace.json; do python -m json.tool "$f" > /dev/null || exit 1; done
+
+      - name: Scripts compile
+        run: python -m py_compile skills/jawdrop/scripts/*.py
+
+      - name: Install script parses and installs
+        run: |
+          bash -n install.sh
+          HOME="$(mktemp -d)" bash -c 'mkdir -p "$HOME/.claude" && ./install.sh && test -f "$HOME/.claude/skills/jawdrop/SKILL.md"'

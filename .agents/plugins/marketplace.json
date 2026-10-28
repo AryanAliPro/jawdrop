@@ -1,0 +1,21 @@
+{
+  "name": "jawdrop",
+  "interface": {
+    "displayName": "Jawdrop"
+  },
+  "plugins": [
+    {
+      "name": "jawdrop",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/AryanAliPro/jawdrop.git",
+        "ref": "main"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Design"
+    }
+  ]
+}

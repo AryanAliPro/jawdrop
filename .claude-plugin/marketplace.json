@@ -1,0 +1,25 @@
+{
+  "name": "jawdrop",
+  "description": "Jawdrop: the $1 Billion Prize website designer. Fully custom, award-level websites for any business, in any stack.",
+  "owner": {
+    "name": "AryanAliPro",
+    "url": "https://github.com/AryanAliPro"
+  },
+  "plugins": [
+    {
+      "name": "jawdrop",
+      "description": "Designs and builds fully custom, award-level websites for any business, product or person: an original concept per brief, industry vibe, GSAP + ScrollTrigger choreography, SVG animation and micro-interactions, the user's own assets first and verified public images otherwise.",
+      "version": "1.0.0",
+      "source": "./",
+      "skills": ["./skills/jawdrop"],
+      "author": {
+        "name": "AryanAliPro",
+        "url": "https://github.com/AryanAliPro"
+      },
+      "homepage": "https://github.com/AryanAliPro/jawdrop",
+      "repository": "https://github.com/AryanAliPro/jawdrop",
+      "license": "MIT",
+      "keywords": ["skills", "web-design", "website", "landing-page", "gsap", "animation", "frontend"]
+    }
+  ]
+}
