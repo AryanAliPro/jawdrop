@@ -45,19 +45,22 @@ Every one of these came from a one-line brief. No two share a layout, because th
 
 ## Install
 
-**Claude Code** (terminal, desktop app and IDE extensions):
+**Claude Code, Codex, Cursor and Antigravity** in one go:
 
 ```bash
-npx skills add AryanAliPro/jawdrop -g -a claude-code
+npx skills add AryanAliPro/jawdrop -g -a claude-code -a codex -a cursor -a antigravity -y
 ```
 
-**Every agent at once** (Claude Code, Codex, Cursor, Antigravity, Windsurf, GitHub Copilot, Gemini CLI, OpenCode and 70+ more):
+**Pick your agents yourself** (Claude Code, Codex, Cursor, Antigravity, Windsurf, GitHub Copilot, Gemini CLI, OpenCode and 70+ more):
 
 ```bash
 npx skills add AryanAliPro/jawdrop -g
 ```
 
-It asks which agents to install to. Tick every agent you use with the space bar, then press Enter. If you've used `npx skills` before, the list starts with your previous choice, which may not include Claude Code.
+How the list works:
+- The top group, **Universal (.agents/skills)**, is always included: Codex, Cursor, Antigravity, Gemini CLI, GitHub Copilot, OpenCode, Amp, Cline and more all read that one folder, so they show as plain bullets with nothing to tick (some sit inside the "...and 7 more" line).
+- Everything else is under **Additional agents**, including Claude Code. Type to search (for example `claude`), press space to tick it, then Enter.
+- If you've used `npx skills` before, the list starts from your last choice, so check that the agents you want are ticked.
 
 Both commands use the [`skills`](https://github.com/vercel-labs/skills) CLI and need Node.js 22.20 or later. Start a new session afterwards so your agent loads the skill.
 
