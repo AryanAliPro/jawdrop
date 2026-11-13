@@ -46,6 +46,7 @@ Originality and visual craft.
 - Does every section have its own intentional composition? Do neighbors differ?
 - Is the typography confident, characterful and well set (scale contrast, line length, spacing, rag)?
 - Did anything from the burned list or the AI house styles sneak in?
+- Does every drawn element (SVG, CSS or canvas) look intentional and professionally crafted? Stiff vector clip-art standing in for a photo pulls the score down.
 - Would this win Site of the Day?
 
 ### 2. The Motion Director
@@ -53,7 +54,7 @@ Choreography and interaction.
 - Is the signature moment truly new, and does it mean something about the business?
 - Is the motion vocabulary varied, with each element type moving in a way that suits it?
 - Do easing and timing feel physical and on-brand? Is anything janky, sluggish or gratuitous?
-- Do SVG animations exist and serve the concept?
+- Do SVG animations serve the concept, rather than being added just to tick a box?
 - Do the micro-interactions reward every hover, focus and click?
 
 ### 3. The Industry Insider (20 years in this business)

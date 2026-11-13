@@ -44,6 +44,7 @@ Look for anything the user provided: images or files attached in the conversatio
 - Never swap a user's photo for stock because the stock looks "nicer". Art-direct theirs instead: crop with intent, mask, grade, frame.
 - If they gave some assets but not enough, fill the gaps with public images graded to match theirs.
 - With no assets at all, use relevant public image URLs, found and verified the way `references/imagery.md` describes. Image IDs you remember are often wrong, so every URL gets checked with `scripts/check_urls.py` before it ships.
+- Checking photo URLs is routine, not a risk: a URL that fails gets swapped for another photo. Photos that are hard to find or verify are never a reason on their own to draw the subject in code instead.
 
 ### 3. Immerse: write the vibe dossier
 
@@ -67,18 +68,21 @@ Write three genuinely different concept directions, each with a name, a one-sent
 
 A concept is not a color scheme. It's an organizing metaphor that decides layout logic, motion behavior, type, color, image treatment and the copy's voice. You should be able to state the whole site in one sentence that starts with "The site is...".
 
-**The signature moment** is the interaction nobody has seen before, and it's the engine of the "wow". To invent it, combine three things: an object or process from your dossier, an input the visitor controls (scroll position, scroll velocity, cursor, hover, drag, click, time of day), and a transformation (assemble, reveal, pour, grow, slice, stack, morph, ignite, unfold). Brainstorm several combinations and keep the one that makes you think "oh!". It should land in the hero or the first scroll, and it should mean something about the business, by demonstrating its craft, its promise or its process. Decoration doesn't count.
+**The signature moment** is the interaction nobody has seen before, and it's the engine of the "wow". To invent it, combine three things: an object, image or process from your dossier, an input the visitor controls (scroll position, scroll velocity, cursor, hover, drag, click, time of day), and a transformation (assemble, reveal, pour, grow, slice, stack, morph, ignite, unfold). Brainstorm several combinations and keep the one that makes you think "oh!". It should land in the hero or the first scroll, and it should mean something about the business, by demonstrating its craft, its promise or its process. Decoration doesn't count.
+
+Build the moment in whichever medium makes it most extraordinary (see "Medium" in step 5). When it centres on a real object, it's often strongest as a real photo you mask, layer, slice, sequence or distort (`references/imagery.md` section 6), rather than an object redrawn in code just so it can move.
 
 Then plan two to four supporting moments spread down the page, each a different kind of interaction, so the wow keeps renewing instead of peaking in the hero.
 
-To show the kind of thinking meant (these two are already taken by other entrants, so they're burned, never reuse them): a locksmith's site where scrolling turns the pins of a giant SVG lock and each pin that clicks into place reveals a service; a translation agency whose hero sentence scrambles through languages under the cursor and settles in the visitor's own.
+To show the kind of thinking meant (these three are already taken by other entrants, so they're burned, never reuse them): a locksmith's site where scrolling turns the pins of a giant SVG lock and each pin that clicks into place reveals a service; a ferry company whose full-bleed harbour photo is cut into horizontal strips that ripple at different speeds like a reflection, then settle into one sharp image as the visitor scrolls; a translation agency whose hero sentence scrambles through languages under the cursor and settles in the visitor's own.
 
 ### 5. Derive the design system from the idea
 
 - **Typography**: fonts with character that belong to the concept, a display face paired with a highly readable text face, a fluid scale with `clamp()`, and dramatic contrast between the largest and smallest sizes. Sources: Google Fonts, Fontshare, or the user's brand fonts. Inter, Roboto, Arial, Open Sans, Poppins and Montserrat are everyone's defaults, so they never carry the display voice.
 - **Color**: from the dossier's real materials and light, and from the user's brand when they have one. Define tokens as CSS custom properties: a dominant color, supporting colors and one accent used with discipline. Body text meets WCAG AA contrast.
-- **Texture and depth**: grain, paper, material photography, shadows that agree with the concept's light source, and patterns drawn from the industry's own shapes as SVG.
+- **Texture and depth**: grain, paper, material photography, shadows that agree with the concept's light source, and abstract SVG patterns taken from the industry's own shapes.
 - **Layout**: a clear grid that you break on purpose. Neighboring sections never share a composition. Vary density and scale, and use overlap, full-bleed, asymmetry, sticky elements and generous negative space. Design the mobile layout as its own composition rather than letting the desktop one collapse into a stack.
+- **Medium**: decide deliberately how each part of the site is shown: real photography, video, type, graphic SVG, illustration, WebGL, or a mix. Pick whatever makes this subject look extraordinary, not whatever is easiest to animate. As a guide, real products, places, food and people usually look most premium photographed and art-directed. SVG shines for graphic things: logos, linework, routes, masks, type, dials and data, diagrams, patterns and marks. A drawn illustration of a real object works only when it's a deliberate style for this concept and you can execute it at a professional illustrator's level. Stiff, gradient-shaded vector stand-ins for photos make a site look cheap.
 - **Illustration and icons**: custom SVG drawn for this concept, not a stock icon set.
 - **The small things judges notice**: cursor, text selection color, focus rings, scrollbar, favicon, 404 or empty states if there are any, the footer. Brand all of them.
 
@@ -99,7 +103,7 @@ Every entry has these layers:
 1. **First impression**: the hero assembles itself in a choreographed sequence of about 2.5 seconds or less. A preloader is allowed only if it's a branded moment of 2 seconds or less that flows into the hero, never a spinner in front of content.
 2. **The signature moment and the supporting moments** from step 4.
 3. **Scroll storytelling**: ScrollTrigger reveals chosen per element type, plus at least one pinned or scrubbed sequence where scroll drives a transformation.
-4. **SVG animation**: line drawing, morphing, animated illustrations, icons or dividers that come from the concept.
+4. **SVG animation**: line drawing, morphing, masks, animated illustrations, icons or dividers that come from the concept. Use it where it makes the page better, not to tick a box.
 5. **Micro-interactions on everything interactive**: hover, `:focus-visible`, pressed states, cursor-aware or magnetic buttons, link animations, form feedback, menu open and close.
 6. **Transitions**: between sections, and between pages on multi-page sites.
 
@@ -142,6 +146,7 @@ The jury rejects these on sight because they're the fingerprints of templates an
 - Every section built from the same centered heading, subtitle and grid, with the same padding.
 - Fade-up-on-scroll as the only animation on the site.
 - Default fonts as the display voice, emoji as icons, unmodified icon libraries.
+- Stiff, gradient-shaded vector clip-art of real objects (a cup, a coffee machine, a building) standing in for photos.
 - Rounded cards with soft drop shadows everywhere: the generic SaaS-template look, and Tailwind's default slate and indigo palette.
 - Lorem ipsum, "Welcome to our website", and the AI copy clichés listed in step 6.
 
@@ -152,6 +157,7 @@ AI-built sites have their own house styles, and the jury has seen them all. Use 
 - The "tasteful editorial" default: warm cream background, huge italic serif, thin rules, grain.
 - The "tech" default: near-black background, one acid or neon accent, monospace labels.
 - Numbered section labels like "01 / 02" on every section, "(scroll)" hints, a giant marquee of the business name.
+- The "code-drawn diorama" default: the subject rebuilt as an interactive vector toy (a cup you stir, a building whose windows light up) because a drawing is easier to animate than a photo.
 
 When you build more than one site in a session or project, each must differ from the others in concept, palette, typography, layout logic and signature moment.
 
@@ -159,7 +165,7 @@ When you build more than one site in a session or project, each must differ from
 
 - `references/motion.md`: GSAP and Lenis setup (verified versions), bootstrap code, the technique arsenal, pitfalls. Read before writing any animation.
 - `references/stacks.md`: wiring for static single and multi-page sites, React, Next.js, Vue and Nuxt, Svelte and SvelteKit, Astro, Tailwind, and existing projects. Read the section for your stack.
-- `references/imagery.md`: using the user's assets, finding real public images, verifying them, art-directing mixed sources, fallbacks. Read before choosing images.
+- `references/imagery.md`: using the user's assets, finding real public images, verifying them, art-directing mixed sources, animating photos, fallbacks. Read before choosing images.
 - `references/jury.md`: the verification gate and the five-judge scorecard. Run it before hand-over.
 - `scripts/check_urls.py`: checks every external URL in the build resolves; `--thumbs DIR` saves image thumbnails so you can look at them.
 - `scripts/find_images.py`: searches public image sources (Unsplash and Pexels APIs when keys are set, otherwise Openverse and Wikimedia Commons) and returns verified URLs.

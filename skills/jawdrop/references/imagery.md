@@ -2,6 +2,8 @@
 
 Images carry most of a site's industry vibe, so they deserve as much care as the layout. The order of preference never changes: the user's own assets first, then relevant public images, all verified before they ship.
 
+For a business with a physical product, place or service, well art-directed real photos are usually the fastest route to a premium, believable site, and a quick vector redraw of the same thing rarely holds up next to them. Finding and verifying photos takes effort. That's expected, and it isn't a reason to draw the subject instead.
+
 ## Contents
 
 1. The user's assets
@@ -9,8 +11,9 @@ Images carry most of a site's industry vibe, so they deserve as much care as the
 3. Finding real images
 4. Verify and look
 5. Art direction: making mixed sources feel like one shoot
-6. Implementation details
-7. Never use
+6. Photos in motion: making the photo the signature moment
+7. Implementation details
+8. Never use
 
 ---
 
@@ -65,6 +68,8 @@ Unsplash or Pexels IDs you remember go into the candidate list, and they pass on
 
 Search specifically. "Bakery" returns the same croissant photo every other entrant used. "Flour dust in morning light on a wooden bench", "baker's hands shaping a boule", "scored sourdough crust close-up" return images with vibe.
 
+**When photos are hard to find**, keep looking before you give up on a section. Search 5 to 10 times with different, specific queries (materials, hands at work, details, the place, the result), use method B and a browser if you have one, and try Wikimedia Commons for real places and equipment. If a section still has no fitting photo, carry it with type, color, layout and graphics, or reuse a strong photo you already have with a different crop.
+
 ## 4. Verify and look
 
 ```bash
@@ -89,7 +94,20 @@ Replace anything broken, irrelevant or off-mood, and re-run the check until it p
 - **Image as material**: images can be textures inside type (`background-clip: text`), layers revealed by the cursor, or frames in a scroll-driven sequence. They don't always have to be rectangles in a grid.
 - **Consistency over quantity**: six excellent, consistently graded images beat twenty mismatched ones.
 
-## 6. Implementation details
+## 6. Photos in motion: making the photo the signature moment
+
+When the concept needs a real object to move, react or transform, these techniques make the photo itself the interaction:
+
+- **Mask reveals**: `clip-path` (inset, circle, polygon) or an SVG `clipPath` shaped by the concept opens, wipes or traces across the photo with scroll or cursor.
+- **Strips and tiles**: split one photo into slices (repeated elements with shifted `background-position`) that drift, stagger, ripple or reassemble with scroll velocity.
+- **Layered cutouts**: two or three versions of the same photo (background, subject and foreground cropped or masked) moving at different depths with scroll or pointer, for real parallax depth.
+- **Scrubbed frame sequences**: a handful of real photos of a process (pour, pull, fold, build, before and after) swapped or crossfaded by scroll, or a short real video scrubbed with `currentTime`.
+- **Cursor-driven layers**: a spotlight or lens that reveals a second photo (raw and finished, day and night, before and after) under the cursor.
+- **Distortion**: an SVG `feDisplacementMap`, or a WebGL plane when the concept truly needs it, applied to the photo for liquid, heat, glass or ripple effects.
+- **Grow and settle**: a photo scales from a small slot to full-bleed (or back) with Flip or a pinned timeline, carrying the story into the next section.
+- **Graphics on top**: thin SVG lines that trace the photo's edges, dimension lines, gauges, labels and counters that read what's in it, routes that cross it.
+
+## 7. Implementation details
 
 - `width` and `height` attributes (or CSS `aspect-ratio`) on every image, to prevent layout shift.
 - `loading="lazy"` and `decoding="async"` below the fold, `fetchpriority="high"` on the hero image.
@@ -99,7 +117,7 @@ Replace anything broken, irrelevant or off-mood, and re-run the check until it p
 - **Credits**: list sources at hand-over, and add a credit line in the footer or a credits section for any image whose license requires attribution.
 - In Next.js, Nuxt or Astro, allow the remote image hosts in the framework config (see `stacks.md`), or the build fails or the images never render.
 
-## 7. Never use
+## 8. Never use
 
 - `source.unsplash.com`: shut down, returns errors.
 - `via.placeholder.com`, `placeholder.com`, `placehold.it`: dead or unreliable, and they look like placeholders.

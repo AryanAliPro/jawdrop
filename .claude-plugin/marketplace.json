@@ -9,7 +9,7 @@
     {
       "name": "jawdrop",
       "description": "Designs and builds fully custom, award-level websites for any business, product or person: an original concept per brief, industry vibe, GSAP + ScrollTrigger choreography, SVG animation and micro-interactions, the user's own assets first and verified public images otherwise.",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "source": "./",
       "skills": ["./skills/jawdrop"],
       "author": {

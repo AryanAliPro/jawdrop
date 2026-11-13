@@ -154,30 +154,32 @@ Elements hidden this way must be revealed with `gsap.to(el, { autoAlpha: 1 })` o
 
 ## 4. The technique arsenal
 
-These are ingredients, not a checklist. Choose what serves the concept, combine and transform them, and invent new ones. The signature moment should usually be something you build from these parts rather than one of them used as-is.
+These are ingredients, not a checklist. Choose what serves the concept, combine and transform them, and invent new ones. The signature moment should usually be something you build from these parts rather than one of them used as-is. Pick the medium per element (photo, video, type, SVG, canvas, WebGL) by what looks best for this subject, not by what's easiest to animate.
 
 **On load**
 - Line-masked headline rise with SplitText (`mask: 'lines'`), per-character variants for short display words
 - Text scramble into the final words (ScrambleTextPlugin)
 - Image unmasking with `clip-path` (inset, polygon, circle) or SVG `clipPath` shaped by the concept
-- Logo or illustration drawn stroke by stroke with DrawSVG, then filled
+- Logo, illustration, route or diagram drawn stroke by stroke with DrawSVG, then filled
 - A preloader that transforms into the hero with Flip instead of disappearing
 - Counters rolling to their value
 - Layered depth entrance: background, midground and foreground arriving at different speeds
 
 **Scroll-driven (scrub and pin)**
 - A pinned sequence where a timeline scrubs through a transformation (an object assembling, a process step by step, a before-and-after)
+- A photo split into strips or tiles that drift apart and reassemble with scroll velocity
+- Layered cutouts of one photo at different depths, for real parallax
 - A horizontal track inside a pinned section, with nested triggers via `containerAnimation`
 - Full-bleed media that scales down into its slot in a grid, or grows from a slot into full-bleed
 - Cards that stack, pile, peel or fan as you scroll
 - Text that fills with color word by word as the visitor reads
-- An SVG path that draws itself along the scroll, or an object traveling a route with MotionPath
+- An SVG path that draws itself along the scroll, or an object or photo cutout traveling a route with MotionPath
 - Shape morphing driven by scroll (MorphSVG)
 - Sticky split-screen where one side stays and the other swaps content
 - Zoom-through: a mask or opening grows until it becomes the next section
 - Theme shifts: background and text colors tween as sections enter
 - Parallax layers at different speeds, kept subtle on text
-- Image sequence on canvas, for product rotations or processes, when you have frames
+- Image sequence on canvas, or a real video scrubbed by scroll, for product rotations or processes
 
 **Scroll velocity and direction**
 - Skew or stretch that responds to scroll speed and eases back to rest
@@ -194,7 +196,7 @@ These are ingredients, not a checklist. Choose what serves the concept, combine 
 **Click and drag**
 - Draggable carousels with inertia
 - Flip transitions between states: filtering a grid, expanding a card into a detail view
-- Before-and-after sliders, configurators, interactive SVG diagrams
+- Before-and-after sliders on real photos, configurators, interactive SVG diagrams and data
 - Full-screen menus treated as a choreographed moment, not a dropdown
 
 **Ambient life**
