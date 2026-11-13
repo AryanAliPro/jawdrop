@@ -165,7 +165,7 @@ skills/jawdrop/
 ├── references/
 │   ├── motion.md         GSAP + Lenis setup, technique arsenal, pitfalls
 │   ├── stacks.md         wiring for every framework
-│   ├── imagery.md        your assets first, finding and verifying public images
+│   ├── imagery.md        your assets first, finding, verifying and animating images
 │   └── jury.md           the verification gate and the five-judge scorecard
 └── scripts/
     ├── check_urls.py     checks every image, script and font URL loads
